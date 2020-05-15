@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <title>Teste ES6</title>
+</head>
+<body>
+
+    <button id="NovoToDo">Adicionar</button>
+
+
+    <script>
+        class TodoList {
+    constructor() {
+        this.toDos = [];
+    }
+
+    addToDo() {
+        this.toDos.push("Novo Todo");
+        console.log(this.toDos);
+    }
+
+}
+
+const MinhaLista = new TodoList();
+
+document.getElementById("NovoToDo").onclick = function() {
+    MinhaLista.addToDo();
+}
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

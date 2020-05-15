@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lidando com Elementos</title>
+</head>
+<body>
+
+    <div id="app">
+        <input id="nome"/>
+
+    </div>
+
+
+    <script>
+        var linkElement = document.createElement("a"); // cria o elemento "a" nesse caso se trata de link;
+        linkElement.setAttribute("href", "http://sercostech.com"); // .setAtribute define qual atributo sera criado
+        linkElement.setAttribute("title", "Site da SERCOS");
+
+        var textElement = document.createTextNode("Acessar o site da SERCOS Tecnologia"); // cria o texto base do link
+        linkElement.appendChild(textElement);
+
+        var containerElement = document.querySelector("#app"); // seleciona o item HTML que sera linkado ao codigo javascript
+        containerElement.appendChild(linkElement);
+
+        var inputElement = document.querySelector("#nome"); // seleciona o novo elemento do HTML nesse caso input
+        containerElement.removeChild(inputElement); // chama o elemento pai, no caso a "div app" e remove o filho " input";
+
+        
+
+        
+    
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao Javascript</title>
+</head>
+<body>
+
+    <script>
+
+        /** ****************************************************************************************************
+        *************************************Starter javascript - Intrudução************************************
+        - Introdução 
+        - configurando ambiente
+        - Váriaveis e dados
+        - Operações matematicas
+        - Funções
+        - Condicionais 
+        - Operadores lógicos 
+        - Condição Ternaria 
+        - Estruturas de repetição
+        - intervalo e Timeout
+        - Desafio
+        **/
+        //**********Chamada*************************************************************************************************
+
+        var variaveiseDados = false;
+            var operaçoesMatematicas = false;
+            var funcoes = false;
+            var condicionais = true;
+
+        
+        //** Variaveis e dados**/***************************************************************************************
+
+        /**As variaveis em javascript possuem tipagem dinamica e nao tipagem estatica 
+        "var" pode assim condiçoes de inteiros, string, boolean, float..etc**/
+
+            var nome = "Danillo";
+            var idade = 34;
+            var peso = 116;
+            var humano = true;
+
+        // Array de dados
+            var alunos = ['Danillo', 'Gabriela', "etc" ]
+
+        // Objeto em javascript
+
+            var aluno = {
+            nome: alunos[0], /** No aray de alunos acima posição "0"**/
+            idade : 33,
+            peso: 115,
+            humano : true,
+
+            };
+            console.log(nome, idade, peso, humano);
+            console.log(alunos);
+            console.log(aluno.nome, aluno.idade, aluno.peso, aluno.humano );
+  
+
+
+        //Operações matematicas******************************************************************************************
+            var y = 10;
+            var x = 15;
+
+         // ou var y = 10, x = 15;
+
+            x = x + 20; /**Incrementa valores**/
+            y += 20; /**Incrementa valores terceira alternativa**/
+
+      
+
+            console.log(y + x);
+            console.log(x % y); /** Retorna resto de divisão "modulo"**/
+            console.log(x); /** resultado Incrementa valores**/
+            console.log(y); /** resultado Incrementa valores terceira alternativa**/
+
+
+        // Funções *****************************************************************************************************
+    
+            function valores ( number1, number2) {
+            var resultado = number1 + number2; // utilizando a variavel tipo "var" fica limitada ao escopo da function
+            return resultado; // armazenado somente dentro da função 
+            
+            }
+
+            resultadoFuncao = valores( 10, 45); // declaração de variavel fora de escopo para armazenar função
+            
+            console.log(resultadoFuncao);
+
+        //Condicionais*************************************************************************************************
+     
+            function retornaSexo (sexo){
+                                switch(sexo) {
+                                    case 'm':
+                                        return 'masculino';
+                                    case 'f':
+                                        return 'feminino';
+                                    default : 
+                                        return 'outro';
+
+                                }};                          
+
+                    var resultadoSexo = retornaSexo( 'g' );
+                    console.log(resultadoSexo);
+                    
+
+       
+
+            function nemUmNemOutro (indefinido){
+            
+                if ( indefinido === 'g')  {     // o parametro dafuncão pode ser declaraddo
+                    return 'gay';
+                } else {
+                    return 'lesbica';
+                }
+                        
+            }
+
+            
+            var descobri = nemUmNemOutro('l');
+            
+            console.log(descobri);
+
+        //Operadores logicos *************************************************************************************************
+     
+            if (resultadoSexo !== 'masculino' && descobri !== 'gay') {    //&& = "E", || = "OU", !== = "DIFerente",
+                console.log('bixona');
+            }
+
+            var sexo = 'm';
+
+            var masculino ;  // declaração de variavel vazia para utilização
+
+            if (sexo === 'm'){
+                masculino = true;   // nao precisa de decaração 
+            } else {
+                masculino = false;
+            }
+         
+       // var masculino = sexo === 'm' ------->>>>>>   forma simplificada de fazer if e armazenar em variavel 
+
+         console.log(masculino);
+
+        //Condiçoes ternarias *************************************************************************************************
+
+            /** 
+            var sexo = 'l';  condição que normalmelte sera utilizada (funciona)
+            var decode; 
+
+            if ( sexo === 'l'){
+                decode = 'lesbica';
+            }  else {
+                decode = 'gay'
+            }
+
+            **/ 
+
+            var sexo = 'l'
+
+            var retorno = (sexo === 'l') ? 'lesbica' : 'gay'; // condição ternaria forma simplificada de condiçao utilizando "?" e ":";
+
+                console.log(retorno);
+            
+
+        //Estruturas de repetição *************************************************************************************************
+            
+            for ( var testeFor = 0; testeFor <= 100; testeFor ++) { // testa a var "testeFor" enquanto for <= 100 e incrementa 
+                console.log(testeFor); // aconselhado uso quando se sabe o numero de repetiçoes que deseja 
+            };
+
+
+
+               var testeWhile = 1; 
+            while ( testeWhile <= 100 ) { // teste "testeWhile" enche memoria e cpu 
+                console.log(testeWhile)
+                testeWhile ++;
+
+            };
+
+        //Intervalo e Timeout *************************************************************************************************
+            function escreve () {
+                console.log('escreve na tela');
+            }
+
+            setInterval(escreve, 10000);
+            //setTimeout(escreve, 10000) a diferenca que executa uma vez com delay
+
+
+    </script>
+    
+</body>
+</html>

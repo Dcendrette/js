@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando DOM</title>
+</head>
+<body>
+    <div id="app">
+       <!-- <input type="text" name="nome" id="nome"/> --> 
+        <input type="text" name="queryExample"/>
+        <!-- <button class = "botao">adicionar</button> -->
+        <button class = "botao2">adicionar1</button>
+        
+    </div>
+
+    <script>
+        //var inputElemnt = document.getElementById("nome");
+        //var btn1 = document.getElementsByClassName("botao");
+        //var btn2 = document.getElementsByTagName("button")[1]; //retorna sempre um array
+        //var inputElement2 = document.querySelector("body div#app input[name=queryExample]"); // navega no dom com caminho indicado 
+        //var inputElement2 = document.querySelector("[name=queryExample]");// ***modo mais simplificadonao pode haver espaço antes conchete
+        //var inputElement3 = document.querySelectorAll("input");
+       // console.log(inputElemnt);
+       // console.log(btn1);
+       // console.log(btn2);
+            //console.log(inputElement3);
+
+        var btnElement = document.querySelector("button.botao2"); //elemento.classe ("button.botao2")
+        var inputElement4 = document.querySelector("input[name=queryExample]");
+        btnElement.onclick = function () {  
+            var text = inputElement4.value;
+            alert(text);
+        };
+
+       
+
+        //console.log(btnElement);
+
+    </script>
+
+    
+</body>
+</html>

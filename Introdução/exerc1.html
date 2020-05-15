@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        // 1º exercicio --> Crie uma função que dado o objeto a seguir:
+
+var endereco = {
+    rua : "Rua dos Pinheiros",
+    numero : 1293,
+    bairro : "Centro",
+    cidade : "São Paulo",
+    estado : "SP"
+};
+
+// Retorne o seguinte conteudo: --> O usuario mora em São Paulo / SP, no bairro centro, na "Ruas dos Pinheiros"
+//com Nº 1293.
+
+           console.log("O Usuario mora em " + endereco.cidade + " / " + endereco.estado + ", no bairro " + 
+            endereco.bairro + ', na rua "' +  endereco.rua  + '" com Nº ' + endereco.numero + ".");
+
+ 
+//*************************************************************************************
+
+// Resolução Rocketseat
+   
+function exibeMensagem(endereco) {
+  return (
+    "O usuário mora em " +
+    endereco.cidade +
+    " / " +
+    endereco.uf +
+    ", no bairro " +
+    endereco.bairro +
+    ', na rua "' +
+    endereco.rua +
+    '" com nº ' +
+    endereco.numero +
+    "."
+  );
+}
+
+var endereco = {
+  rua: "Rua dos pinheiros",
+  numero: 1293,
+  bairro: "Centro",
+  cidade: "São Paulo",
+  uf: "SP"
+};
+
+console.log(exibeMensagem(endereco));
+
+
+
+    </script>
+</body>
+</html>

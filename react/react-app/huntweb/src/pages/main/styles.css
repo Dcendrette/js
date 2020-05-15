@@ -1,0 +1,77 @@
+.product-list {
+    max-width: 700px; /* Slargura maxima */
+    margin: 20px auto 0; /*  20px no topo e auto na esquerda e direita (centralizar) auto (esquerda e direita) e "0 em baixo */
+    padding: 0 20px; /* quando reduzir a tela nao grudar nas laterais*/
+
+}
+
+.product-list article {
+    background: #fff; /*fundo do article*/
+    border: 1px solid #ddd; /*espessuara da linha*/
+    border-radius: 5px; /*arredondamento de canto*/
+    margin-bottom: 20px; /* espaçamento entre os itens */
+
+}
+
+.product-list article p {
+    font-size: 16px; /*font da descrição*/
+    color: #999; /*cor font da descrição*/
+    margin-top: 5px; /*margem da descrição para o titulo*/
+    line-height: 24px; /*espaçamento da linha*/
+
+}
+
+.product-list article a { /*link*/
+    height: 42px; /*link*/
+    border-radius: 5px;
+    border: 2px solid #da552f;
+    background: none;
+    margin-top: 10px;
+    color: #da552f;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    display: flex; /*posicionamento */
+    justify-content: center; /*alinha ao total da caixa horizontal*/
+    align-items: center;  /*alinha ao total da caixa vertical*/
+    transition: all 0.2s; /*ativa na transição dos estilos*/
+
+
+}
+
+.product-list article a:hover { /*quando o mouse passa por cima do link */
+    background: #da552f;
+    color:#fff;
+}
+
+.product-list .actions {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.product-list .actions button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 0;
+    background: #da552f;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.product-list .actions button[disabled] {
+    opacity: 0.5;
+    cursor: default;
+}
+
+
+.product-list .actions button:hover {
+   opacity: 0.7; 
+   cursor: pointer;
+}
+
+.product-list .actions button[disabled]:hover {
+    opacity: 0.5;
+    cursor: default;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Get Time</title>
+
+    <script src="tf.html"></script>
+</head>
+<body>
+
+    
+
+    <script>
+
+        
+        function tempoDecorrido() {
+
+            var fim = new Date().getTime();
+
+            var tempo = fim - inicio;
+
+            alert('Tempo de execução: ' + (tempo / 1000));
+            }
+
+
+            var inicio;
+
+            function idade() {
+
+            inicio = new Date().getTime();
+
+            /* a função deve ser chamada no fim da "idade", 
+            * mas aqui chamamos após 1 segundo, para simular
+            * que estivemos a trabalhar durante esse tempo
+            */
+            setTimeout(tempoDecorrido, 2000); //2 segundos
+            }
+
+            idade();
+
+
+
+    </script>
+    
+</body>
+</html>

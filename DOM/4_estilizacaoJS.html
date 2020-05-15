@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Estilizacao pelo javascript</title>
+</head>
+<body>
+    
+    <div id="app">
+        <div class="box"></div>
+        
+    </div>
+
+
+    <script>
+
+        var boxElement = document.querySelector('#app .box'); //.box somente tambem funciona
+
+        boxElement.style.width = "1000px";
+        boxElement.style.height = "100px";
+        boxElement.style.backgroundColor = "#00f";
+
+        //** diferente do curso meu quadrado vermelho/azul so renderizou passando os valores
+        //em formato de string seguido de px;
+
+    </script>
+</body>
+</html>

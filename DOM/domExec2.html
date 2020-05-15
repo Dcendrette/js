@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Danillo</title>
+</head>
+
+<body>
+  <button id="btnHTML">Novo quadrado</button>
+
+  <div id="NovoQuadrado"></div>
+
+    <script>
+        var btn = document.getElementById('btnHTML');
+        var qdd = document.getElementById('NovoQuadrado');
+
+        function getRandomColor() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+                return color;
+            }
+
+
+        btn.onclick = function() {
+            var quadrado = document.createElement('div');
+
+            quadrado.style.width = '100px';
+            quadrado.style.height = '100px';
+            quadrado.style.backgroundColor = '#f00';
+
+            quadrado.onmouseover = function () {
+            
+            //var newColor = getRandomColor(); // #E943F0 *  nao estava sendo utilizado e foi retirado     
+            quadrado.style.backgroundColor = getRandomColor();
+
+             };
+
+
+             qdd.appendChild(quadrado);//Define que novo e um objeto do qdd
+
+        };
+          //getRandomColor();
+
+            //console.log(newColor);
+
+
+    </script>
+
+
+    
+</body>
+</html>

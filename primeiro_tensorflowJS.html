@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+   
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js"></script>
+   
+    <title>Primeiro Modelo</title>
+</head>
+<body>
+
+    <div id="output_field"></div>
+    <div id="tempo_Decorrido"></div>
+
+    <script>
+        async function learnLinear() { 
+                idade();                                // função assincrona porque sempre ira  levar um tempo para realizar o treinamento
+                const modelo = tf.sequential(); // as saidas de uma camada são as entradas de outra
+                modelo.add(tf.layers.dense({units : 1, inputShape: [1]})); // camada densa porque estao conectados entre si 
+                                                                            //L-->  (redundante porque 1 camada e 1 nó )
+
+                modelo.compile({
+                  loss: "meanSquaredError",                               //erro quadratico médio função de perda 
+                    optimizer: "sgd"                                      //descida de gradiente estocastica 
+    
+    
+                });
+                const XValues = tf.tensor2d([-1, 0, 1, 2, 3, 4 ], [6, 1]);   //lista de x e linhas, colunas
+                const YValues = tf.tensor2d([-3, -1, 1, 3, 5, 7], [6, 1]);
+                
+                await modelo.fit(XValues,YValues, {epochs: 250}); //metodo para treinamento com 250 interaçoes.
+
+                document.getElementById("output_field").innerText = 
+                modelo.predict(tf.tensor2d([20], [1,1]));    // tensor de valor unico"20" numa matrix de 1 pra 1
+                tempoDecorrido();         
+
+        } 
+
+        learnLinear();
+        
+        function tempoDecorrido() {
+
+            var fim = new Date().getTime();
+
+            var tempo = fim - inicio;
+
+            document.getElementById("tempo_Decorrido").innerText =
+            ('Tempo de execução: ' + (tempo / 1000)+ " s");
+            }
+
+
+            var inicio;
+
+            function idade() {
+
+            inicio = new Date().getTime();
+
+            /* a função deve ser chamada no fim da "idade", 
+            * mas aqui chamamos após 1 segundo, para simular
+            * que estivemos a trabalhar durante esse tempo
+            */
+            //setTimeout(tempoDecorrido, 2020);
+            }
+
+
+    </script>
+
+
+
+
+    
+</body>
+</html>
